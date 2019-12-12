@@ -175,6 +175,11 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /*
+         * By Tharles
+         */
+        Laravel\Passport\PassportServiceProvider::class,
+
     ],
 
     /*
