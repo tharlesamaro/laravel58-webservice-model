@@ -16,3 +16,13 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::post('/teste', function (Request $request) {
+    return $request->all();
+});
+
+Route::prefix('auth')->namespace('Auth2')->group(function () {
+
+    Route::post('/login', 'LoginController@login')->name('auth.login');
+
+});
